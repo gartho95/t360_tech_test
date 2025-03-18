@@ -12,7 +12,7 @@ elsewise keep it empty and the code will return a mocked example
 in the project directory run:
 
 ```go mod tidy```
-```go run main.go```
+```go run .```
 
 
 
