@@ -14,7 +14,7 @@ var apiBaseURL string
 func main() {
 	initialiseEnv()
 
-	companyToVehicle, err := vehicleWebCrawler(baseURL)
+	companyToVehicle, err := vehicleWebCrawler()
 	if err != nil {
 		log.Fatalf("Error crawling company vehicles: %v", err)
 		return

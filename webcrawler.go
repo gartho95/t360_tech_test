@@ -7,7 +7,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-func vehicleWebCrawler(url string) (map[string][]string, error) {
+func vehicleWebCrawler() (map[string][]string, error) {
 
 	companyToVehicle := make(map[string][]string)
 
@@ -18,7 +18,7 @@ func vehicleWebCrawler(url string) (map[string][]string, error) {
 	companyNameToRequestName["Fleet Company Ltd"] = "fleetcompany"
 	companyNameToRequestName["Hire Company Ltd"] = "leasecompany"
 
-	resp, err := http.Get(url)
+	resp, err := http.Get(baseURL)
 	if err != nil {
 		log.Fatal("Error fetching URL:", err)
 	}
