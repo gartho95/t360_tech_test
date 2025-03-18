@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"log"
-	"os"
 
 	"cloud.google.com/go/pubsub"
 )
@@ -22,7 +21,7 @@ func publishMessage(topicTitle string, pubSubPacketBody SearchResponse) {
 	}
 
 	ctx := context.Background()
-	client, err := pubsub.NewClient(ctx, os.Getenv("GOOGLE_CLOUD_PROJECT_ID"))
+	client, err := pubsub.NewClient(ctx, googleCloudProjectID)
 	if err != nil {
 		log.Fatalf("Failed to create Pub/Sub client: %v", err)
 	}
