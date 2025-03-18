@@ -4,7 +4,7 @@ Rename ```.env.example``` to ```.env```
 
 IF you have a google project ID with a pubsub set up:
 
-fill in the ```GOOGLE_CLOUD_PROJECT_ID``` in the .env
+fill in the ```GOOGLE_CLOUD_PROJECT_ID``` in the .env (Given the time constraints I have only briefly tested if this works on a test Google Cloud account)
 
 elsewise keep it empty and the code will return a mocked example
 
